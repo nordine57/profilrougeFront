@@ -1,0 +1,45 @@
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<!-- Change code below this line -->
+
+<body>
+<div class="profile-card">
+  <div class="avatar"><img src="https://image.freepik.com/vecteurs-libre/icone-profil-avatar_188544-4755.jpg" alt="profile-img"></div>
+  <div class="salutation">
+
+    <div class="name"><p >Email:{{ utilisateur.email }}</p></div>
+    <div class="name"><p >Nom: {{ utilisateur.nom }}</p></div>
+    <div class="name"><p >Prenom:{{ utilisateur.prenom }}</p></div>
+    <div class="designation">@if(authentification.utilisateur.role == "ROLE_ADMIN") {
+      <p class="name">Vous etes administrateur</p>
+
+
+    }
+      @if(authentification.utilisateur.role == "ROLE_CLIENT") {
+
+        <p class="name" >Vous etes client</p>
+      }
+      @if(authentification.utilisateur.role == "ROLE_TECH") {
+
+        <p class="name">Vous etes technicien</p>
+      }
+      @if(authentification.utilisateur.role == "ROLE_ADH") {
+
+        <p class="name">Vous etes adherent a l'association</p>
+      }</div>
+  </div>
+  <div class="options">
+    <button routerLink="/edit-profil" class="edit-profile" ><span>Modifier le profil</span></button>
+  </div>
+</div>
+</body>
+<!-- Change code above this line -->
+
+
+

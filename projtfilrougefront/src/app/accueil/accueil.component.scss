@@ -1,0 +1,116 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #343a40;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff ;
+}
+
+.nav-link {
+  color: #ffffff ;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #adb5bd ;
+}
+
+.nav-link.btn {
+  padding: 0;
+  cursor: pointer;
+}
+
+.landing-page {
+  height: 100vh;
+  background: url('https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.landing-page p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.offer-page {
+  background-color: #fff;
+}
+
+.offer-box {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact {
+  background-color: #e9ecef;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-collapse {
+    justify-content: start;
+  }
+
+  .landing-page h1 {
+    font-size: 2.5rem;
+  }
+
+  .landing-page p {
+    font-size: 1.25rem;
+  }
+}

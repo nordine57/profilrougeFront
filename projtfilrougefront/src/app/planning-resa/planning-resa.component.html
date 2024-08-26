@@ -1,0 +1,45 @@
+
+<body>
+<div class="container">
+  <div class="landing-page-text">
+    <h1>Liste des Reservations</h1>
+    <div class="grid-container">
+      <!-- Parcours de la liste des utilisateurs inscrits -->
+      <div *ngFor="let resa of listeResa; trackBy: trackById" class="grid-item mt-2">
+        <div class="card card-block">
+          <h5 class="card-title mt-3 mb-3">Nom de la reservation: {{ resa.nomReservation }}</h5>
+          <h5 class="card-title mt-3 mb-3">Date de la reservation: {{ resa.dateReservation }}</h5>
+          <h5 class="card-title mt-3 mb-3">Heure de la reservation:{{ resa.heureReservation }}</h5>
+          <h5 class="card-title mt-3 mb-3">Le probleme de la voiture : {{ resa.problemeVoiture }}</h5>
+
+          <!-- Vérification de l'existence de l'objet voiture -->
+          <div *ngIf="resa.executantreservation === null; else technicienBlock" class="landing-page">
+            Technicien = Reservation libre
+          </div>
+          <ng-template #technicienBlock>
+            <div class="landing-page">
+              Technicien : {{ resa.executantreservation.nom }}
+            </div>
+          </ng-template>
+
+
+
+
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="onPrendreResa(resa)"
+          >
+            Prendre cette reservation
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>

@@ -1,0 +1,75 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #343a40;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #ffffff !important;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #adb5bd !important;
+}
+
+.nav-link {
+  padding: 0;
+  cursor: pointer;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%288%2c 8%2c 8%2c 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .navbar-collapse {
+    justify-content: center;
+  }
+
+  .nav-item {
+    margin-bottom: 10px; /* Add margin between navigation items */
+  }
+}
+
+.logout-item {
+  @media (max-width: 992px) {
+    /* In smaller screens, center the logout button within its parent */
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-collapse {
+    justify-content: start;
+  }
+
+  .nav-item {
+    margin-bottom: 10px; /* Add margin between navigation items */
+  }
+}
